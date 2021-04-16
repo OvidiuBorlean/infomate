@@ -1,0 +1,31 @@
+#[Hostname] 
+c_hostname: 10.139.252.217
+
+#[Credentials]
+c_username : ovidiu.borlean
+c_password : Apr@2021
+
+#[Pre-Configuration Statements]
+
+pre_check_1 :  show interface description 
+pre_check_2 :  show hostname 
+#pre_check_3 :  show ip route 
+
+#[Configuration Statements]
+
+config_from_file : False
+ios_config :  ios_commands 
+
+config_1 :  configure terminal 
+config_2 : do show interface description
+
+
+#[Post-Configuration Statements]
+
+post_check_1 :  show interface description 
+post_check_2 :  show hostname 
+#post_check_3 :  show ip route 
+ 
+#[Reporting]
+change_id :  CHCG00001 
+report_file :  report 
